@@ -159,6 +159,13 @@
 	swapbutton.style.height = '40px';
 	swapbutton.style.fontSize = '14px';
 	swapbutton.setAttribute('onclick', 'swapBackground();');
+	var prevbutton = document.createElement('input');
+	prevbutton.type = 'submit';
+	prevbutton.value = '« Главное меню «';
+	prevbutton.style.width = '200px';
+	prevbutton.style.height = '40px';
+	prevbutton.style.fontSize = '14px';
+	prevbutton.setAttribute('onclick', "javascript:document.location.replace('index.html')");
 	document.body.appendChild(startButton);
 	document.body.appendChild(stopButton);
 	document.body.appendChild(document.createElement('br'));
@@ -167,6 +174,8 @@
 	document.body.appendChild(penbutton);
 	document.body.appendChild(document.createElement('br'));
 	document.body.appendChild(swapbutton);
+	document.body.appendChild(document.createElement('br'));
+	document.body.appendChild(prevbutton);
 	canvas2.hidden = true;
 </script>
 </body>
