@@ -4,7 +4,6 @@
 <title>Second lvl | Two figures</title>
 </head>
 <body style="text-align:center;">
-	<div id="mdiv">
 	<canvas id="canvas1" width="400px" height="400px">
 	</canvas>
 	<canvas id="canvas2" width="400px" height="400px">
@@ -13,11 +12,8 @@
 	</canvas>
 	<canvas id="canvas4" width="400px" height="400px">
 	</canvas>
-	</div>
 	<br />
 <script>
-	var mdiv = document.getElementById('mdiv');
-	mdiv.style.display="inline";
 	var canvas1 = document.getElementById('canvas1');
 	var canvas2 = document.getElementById('canvas2');
 	var canvas3 = document.getElementById('canvas3');
@@ -146,35 +142,32 @@
 			clearInterval(minterval);
 		minterval = setInterval(loopRotate, u);
 	}
+	function doAllCanvas(){
+		doCanvas1();
+		doCanvas2();
+		doCanvas3();
+		doCanvas4();
+	}
 	function setAngle(){
 		var res = prompt('Введите угол (π/<int>; 4<=dA<=100): ', Math.pow(dA/Math.PI, -1));
 		res = parseInt(res);
 		if ((res >= 4) && (res <= 100))
 			dA = Math.PI/res;
-		doCanvas1();
-		doCanvas2();
-		doCanvas3();
-		doCanvas4();
+		doAllCanvas();
 	}
 	function setU(){
 		var res = prompt('Введите скорость вращения (в мс; 25<=U<=5000): ', u);
 		res = parseInt(res);
 		if ((res >= 25) && (res <= 5000))
 			u = res;
-		doCanvas1();
-		doCanvas2();
-		doCanvas3();
-		doCanvas4();
+		doAllCanvas();
 	}
 	function setSizeOfLine(){
 		var res = prompt('Введите размер линии (в мс; 1<=U<=50): ', lsize);
 		res = parseInt(res);
 		if ((res >= 1) && (res <= 50))
 			lsize = res;
-		doCanvas1();
-		doCanvas2();
-		doCanvas3();
-		doCanvas4();
+		doAllCanvas();
 	}
 	function swapBackground(){
 		if (canvcolor == 'black') {
@@ -185,15 +178,9 @@
 			canvcolor = 'black';
 			document.body.style.background = 'white';
 		}
-		doCanvas1();
-		doCanvas2();
-		doCanvas3();
-		doCanvas4();
+		doAllCanvas();
 	}
-	doCanvas1();
-	doCanvas2();
-	doCanvas3();
-	doCanvas4();
+	doAllCanvas();
 	var startButton = document.createElement('input');
 	startButton.type = 'submit';
 	startButton.value = 'Старт';
