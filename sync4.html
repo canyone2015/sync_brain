@@ -1,0 +1,383 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Fourth lvl | Four figures</title>
+</head>
+<body style="text-align:center;">
+	<canvas id="canvas1" width="400px" height="400px">
+	</canvas>
+	<canvas id="canvas2" width="400px" height="400px">
+	</canvas>
+	<canvas id="canvas3" width="400px" height="400px">
+	</canvas>
+	<canvas id="canvas4" width="400px" height="400px">
+	</canvas><br />
+	<canvas id="canvas5" width="400px" height="400px">
+	</canvas>
+	<canvas id="canvas6" width="400px" height="400px">
+	</canvas>
+	<canvas id="canvas7" width="400px" height="400px">
+	</canvas>
+	<canvas id="canvas8" width="400px" height="400px">
+	</canvas>
+	<br />
+<script>
+	var canvas1 = document.getElementById('canvas1');
+	var canvas2 = document.getElementById('canvas2');
+	var canvas3 = document.getElementById('canvas3');
+	var canvas4 = document.getElementById('canvas4');
+	var canvas5 = document.getElementById('canvas5');
+	var canvas6 = document.getElementById('canvas6');
+	var canvas7 = document.getElementById('canvas7');
+	var canvas8 = document.getElementById('canvas8');
+	var A = 0, dA = Math.PI/10;
+	var s = Math.trunc(2*Math.PI/dA);
+	var x2, y2;
+	var minterval;
+	var u = 120;
+	var lsize = 5;
+	var canvcolor = 'black';
+	var ctx1 = canvas1.getContext('2d');
+	var ctx2 = canvas2.getContext('2d');
+	var ctx3 = canvas3.getContext('2d');
+	var ctx4 = canvas4.getContext('2d');
+	var ctx5 = canvas5.getContext('2d');
+	var ctx6 = canvas6.getContext('2d');
+	var ctx7 = canvas7.getContext('2d');
+	var ctx8 = canvas8.getContext('2d');
+	var wwww = canvas1.width / 2;
+	ctx1.translate(wwww, wwww);
+	ctx1.scale(4, 4);
+	ctx2.translate(wwww, wwww);
+	ctx2.scale(4, 4);
+	ctx3.translate(wwww, wwww);
+	ctx3.scale(4, 4);
+	ctx4.translate(wwww, wwww);
+	ctx4.scale(4, 4);
+	ctx5.translate(wwww, wwww);
+	ctx5.scale(4, 4);
+	ctx6.translate(wwww, wwww);
+	ctx6.scale(4, 4);
+	ctx7.translate(wwww, wwww);
+	ctx7.scale(4, 4);
+	ctx8.translate(wwww, wwww);
+	ctx8.scale(4, 4);
+	function doCanvas1(){
+		x2 = 50; y2 = 0; A = 0;
+		s = Math.trunc(2*Math.PI/dA);
+		ctx1.beginPath();
+		ctx1.translate(-wwww, -wwww);
+		ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+		ctx1.translate(wwww, wwww);
+		ctx1.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx1.moveTo(0,0);
+			ctx1.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx1.closePath();
+		ctx1.strokeStyle=canvcolor;
+		ctx1.stroke();
+	}
+	function doCanvas2(){
+		A = dA / 2;
+		x2 = Math.trunc(50*Math.cos(A));
+		y2 = Math.trunc(50*Math.sin(A));
+		s = Math.trunc(2*Math.PI/dA);
+		ctx2.beginPath();
+		ctx2.translate(-wwww, -wwww);
+		ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+		ctx2.translate(wwww, wwww);
+		ctx2.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx2.moveTo(0,0);
+			ctx2.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx2.closePath();
+		ctx2.strokeStyle=canvcolor;
+		ctx2.stroke();
+	}
+	function doCanvas3(){
+		x2 = 50; y2 = 0; A = 0;
+		s = Math.trunc(2*Math.PI/dA);
+		ctx3.beginPath();
+		ctx3.translate(-wwww, -wwww);
+		ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+		ctx3.translate(wwww, wwww);
+		ctx3.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx3.moveTo(0,0);
+			ctx3.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx3.closePath();
+		ctx3.strokeStyle=canvcolor;
+		ctx3.stroke();
+	}
+	function doCanvas4(){
+		A = dA / 2;
+		x2 = Math.trunc(50*Math.cos(A));
+		y2 = Math.trunc(50*Math.sin(A));
+		s = Math.trunc(2*Math.PI/dA);
+		ctx4.beginPath();
+		ctx4.translate(-wwww, -wwww);
+		ctx4.clearRect(0, 0, canvas4.width, canvas4.height);
+		ctx4.translate(wwww, wwww);
+		ctx4.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx4.moveTo(0,0);
+			ctx4.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx4.closePath();
+		ctx4.strokeStyle=canvcolor;
+		ctx4.stroke();
+	}
+	function doCanvas5(){
+		x2 = 50; y2 = 0; A = 0;
+		s = Math.trunc(2*Math.PI/dA);
+		ctx5.beginPath();
+		ctx5.translate(-wwww, -wwww);
+		ctx5.clearRect(0, 0, canvas5.width, canvas5.height);
+		ctx5.translate(wwww, wwww);
+		ctx5.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx5.moveTo(0,0);
+			ctx5.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx5.closePath();
+		ctx5.strokeStyle=canvcolor;
+		ctx5.stroke();
+	}
+	function doCanvas6(){
+		A = dA / 2;
+		x2 = Math.trunc(50*Math.cos(A));
+		y2 = Math.trunc(50*Math.sin(A));
+		s = Math.trunc(2*Math.PI/dA);
+		ctx6.beginPath();
+		ctx6.translate(-wwww, -wwww);
+		ctx6.clearRect(0, 0, canvas6.width, canvas6.height);
+		ctx6.translate(wwww, wwww);
+		ctx6.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx6.moveTo(0,0);
+			ctx6.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx6.closePath();
+		ctx6.strokeStyle=canvcolor;
+		ctx6.stroke();
+	}
+	function doCanvas7(){
+		x2 = 50; y2 = 0; A = 0;
+		s = Math.trunc(2*Math.PI/dA);
+		ctx7.beginPath();
+		ctx7.translate(-wwww, -wwww);
+		ctx7.clearRect(0, 0, canvas7.width, canvas7.height);
+		ctx7.translate(wwww, wwww);
+		ctx7.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx7.moveTo(0,0);
+			ctx7.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx7.closePath();
+		ctx7.strokeStyle=canvcolor;
+		ctx7.stroke();
+	}
+	function doCanvas8(){
+		A = dA / 2;
+		x2 = Math.trunc(50*Math.cos(A));
+		y2 = Math.trunc(50*Math.sin(A));
+		s = Math.trunc(2*Math.PI/dA);
+		ctx8.beginPath();
+		ctx8.translate(-wwww, -wwww);
+		ctx8.clearRect(0, 0, canvas8.width, canvas8.height);
+		ctx8.translate(wwww, wwww);
+		ctx8.lineWidth = lsize;
+		for (var i = 1; i <= s; i++){
+			ctx8.moveTo(0,0);
+			ctx8.lineTo(x2,y2);
+			A += dA;
+			x2 = Math.trunc(50*Math.cos(A));
+			y2 = Math.trunc(50*Math.sin(A));
+		}
+		ctx8.closePath();
+		ctx8.strokeStyle=canvcolor;
+		ctx8.stroke();
+	}
+	function loopRotate(){
+		if (canvas1.hidden == true) {
+			canvas1.hidden = false;
+			canvas2.hidden = true;
+		}
+		else if (canvas2.hidden == true) {
+			canvas2.hidden = false;
+			canvas1.hidden = true;
+		}
+		if (canvas3.hidden == true){
+			canvas3.hidden = false;
+			canvas4.hidden = true;
+		}
+		else if (canvas4.hidden == true) {
+			canvas4.hidden = false;
+			canvas3.hidden = true;
+		}
+		if (canvas5.hidden == true){
+			canvas5.hidden = false;
+			canvas6.hidden = true;
+		}
+		else if (canvas6.hidden == true) {
+			canvas6.hidden = false;
+			canvas5.hidden = true;
+		}
+		if (canvas7.hidden == true){
+			canvas7.hidden = false;
+			canvas8.hidden = true;
+		}
+		else if (canvas8.hidden == true) {
+			canvas8.hidden = false;
+			canvas7.hidden = true;
+		}
+	}
+	function rotatecns(){
+		if (minterval !== null)
+			clearInterval(minterval);
+		minterval = setInterval(loopRotate, u);
+	}
+	function doAllCanvas(){
+		doCanvas1();
+		doCanvas2();
+		doCanvas3();
+		doCanvas4();
+		doCanvas5();
+		doCanvas6();
+		doCanvas7();
+		doCanvas8();
+	}
+	function setAngle(){
+		var res = prompt('Введите угол (π/<int>; 4<=dA<=100): ', Math.pow(dA/Math.PI, -1));
+		res = parseInt(res);
+		if ((res >= 4) && (res <= 100))
+			dA = Math.PI/res;
+		doAllCanvas();
+	}
+	function setU(){
+		var res = prompt('Введите скорость вращения (в мс; 25<=U<=5000): ', u);
+		res = parseInt(res);
+		if ((res >= 25) && (res <= 5000))
+			u = res;
+		doAllCanvas();
+	}
+	function setSizeOfLine(){
+		var res = prompt('Введите размер линии (в мс; 1<=U<=50): ', lsize);
+		res = parseInt(res);
+		if ((res >= 1) && (res <= 50))
+			lsize = res;
+		doAllCanvas();
+	}
+	function swapBackground(){
+		if (canvcolor == 'black') {
+			canvcolor = 'white';
+			document.body.style.background = 'black';
+		}
+		else {
+			canvcolor = 'black';
+			document.body.style.background = 'white';
+		}
+		doAllCanvas();
+	}
+	doAllCanvas();
+	var startButton = document.createElement('input');
+	startButton.type = 'submit';
+	startButton.value = 'Старт';
+	startButton.style.width = '100px';
+	startButton.style.height = '75px';
+	startButton.style.fontSize = '16px';
+	startButton.style.cursor = 'pointer';
+	startButton.setAttribute('onclick', 'rotatecns();');
+	var stopButton = document.createElement('input');
+	stopButton.type = 'submit';
+	stopButton.value = 'Стоп';
+	stopButton.style.width = '100px';
+	stopButton.style.height = '75px';
+	stopButton.style.fontSize = '16px';
+	stopButton.style.cursor = 'pointer';
+	stopButton.setAttribute('onclick', 'clearInterval(minterval);');
+	var nbutton = document.createElement('input');
+	nbutton.type = 'submit';
+	nbutton.value = 'Угол';
+	nbutton.style.width = '90px';
+	nbutton.style.height = '60px';
+	nbutton.style.fontSize = '14px';
+	nbutton.style.cursor = 'pointer';
+	nbutton.setAttribute('onclick', 'setAngle();');
+	var sbutton = document.createElement('input');
+	sbutton.type = 'submit';
+	sbutton.value = 'Скорость вращения';
+	sbutton.style.width = '150px';
+	sbutton.style.height = '60px';
+	sbutton.style.fontSize = '14px';
+	sbutton.style.cursor = 'pointer';
+	sbutton.setAttribute('onclick', 'setU();');
+	var penbutton = document.createElement('input');
+	penbutton.type = 'submit';
+	penbutton.value = 'Размер линии';
+	penbutton.style.width = '120px';
+	penbutton.style.height = '60px';
+	penbutton.style.fontSize = '14px';
+	penbutton.style.cursor = 'pointer';
+	penbutton.setAttribute('onclick', 'setSizeOfLine();');
+	var swapbutton = document.createElement('input');
+	swapbutton.type = 'submit';
+	swapbutton.value = 'Дневная/ночная тема';
+	swapbutton.style.width = '200px';
+	swapbutton.style.height = '40px';
+	swapbutton.style.fontSize = '14px';
+	swapbutton.style.cursor = 'pointer';
+	swapbutton.setAttribute('onclick', 'swapBackground();');
+	var prevbutton = document.createElement('input');
+	prevbutton.type = 'submit';
+	prevbutton.value = '« Главное меню «';
+	prevbutton.style.width = '200px';
+	prevbutton.style.height = '40px';
+	prevbutton.style.fontSize = '14px';
+	prevbutton.style.cursor = 'pointer';
+	prevbutton.setAttribute('onclick', "javascript:document.location.replace('index.html')");
+	document.body.appendChild(startButton);
+	document.body.appendChild(stopButton);
+	document.body.appendChild(document.createElement('br'));
+	document.body.appendChild(nbutton);
+	document.body.appendChild(sbutton);
+	document.body.appendChild(penbutton);
+	document.body.appendChild(document.createElement('br'));
+	document.body.appendChild(swapbutton);
+	document.body.appendChild(document.createElement('br'));
+	document.body.appendChild(prevbutton);
+	canvas1.hidden = false;
+	canvas2.hidden = true;
+	canvas3.hidden = false;
+	canvas4.hidden = true;
+	canvas5.hidden = false;
+	canvas6.hidden = true;
+	canvas7.hidden = false;
+	canvas8.hidden = true;
+</script>
+</body>
+</html>
